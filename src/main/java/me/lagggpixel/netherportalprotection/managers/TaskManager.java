@@ -24,6 +24,8 @@ public class TaskManager {
 
                     if (remainingTime <= 0) {
                         TeleportationManager.teleportPlayer(player);
+                        cancelWarningTask(player);
+                        player.removeMetadata("portalTimer", Main.getInstance());
                     }
 
                 } else {
